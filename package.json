@@ -1,0 +1,19 @@
+{
+  "name": "cssify",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.0.8",
+    "@types/css-tree": "^2.3.6"
+  },
+  "scripts": {
+    "dev": "bun test --watch",
+    "test": "bun test"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "css-tree": "^2.3.1"
+  }
+}
