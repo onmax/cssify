@@ -1,10 +1,11 @@
-# cssify
+# css4ify
 
 A simple tool to convert CSS to JSON.
 
 - 🌲 Uses [`csstree`](https://github.com/csstree/csstree) to parse CSS
 - 🚀 ESM support
 - 🤘 TypeScript support
+- 🔮 CSS 4 features supported like CSS Nesting and modern pseudoselectors
 - 📦 Bundled with [Bun](https://bun.sh)
 - 📎 Lightweight
 
