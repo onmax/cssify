@@ -1,5 +1,37 @@
 # cssify
 
+A simple tool to convert CSS to JSON.
+
+- 🌲 Uses [`csstree`](https://github.com/csstree/csstree) to parse CSS
+- 🚀 ESM support
+- 🤘 TypeScript support
+- 📦 Bundled with [Bun](https://bun.sh)
+
+## Usage
+
+```bash
+npm install cssify
+```
+
+```javascript
+import { cssify } from 'cssify';
+
+cssify(`
+  .foo {
+    color: red;
+  }
+  .bar {
+    color: blue;
+  }
+`);
+```
+
+## Missing features
+
+Do you need a feature that is not implemented? Please open an issue or a pull request.
+
+## Development
+
 To install dependencies:
 
 ```bash
