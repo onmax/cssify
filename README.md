@@ -6,6 +6,7 @@ A simple tool to convert CSS to JSON.
 - 🚀 ESM support
 - 🤘 TypeScript support
 - 📦 Bundled with [Bun](https://bun.sh)
+- 📎 Lightweight
 
 ## Usage
 
