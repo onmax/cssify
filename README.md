@@ -24,8 +24,25 @@ cssify(`
   }
   .bar {
     color: blue;
+
+    &:hover {
+      color: green;
+    }
   }
 `);
+/**
+ * {
+ *  ".foo": {
+ *    "color": "red"
+ *  },
+ *  ".bar": {
+ *   "color": "blue",
+ *    "&:hover": {
+ *      "color": "green"
+ *    }
+ *  }
+ * }
+ */
 ```
 
 ## Missing features
