@@ -12,11 +12,11 @@ A simple tool to convert CSS to JSON.
 ## Usage
 
 ```bash
-npm install cssify
+npm install css4ify
 ```
 
 ```javascript
-import { cssify } from 'cssify';
+import { cssify } from 'css4ify';
 
 cssify(`
   .foo {
