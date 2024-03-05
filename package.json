@@ -1,7 +1,7 @@
 {
   "name": "css4ify",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert CSS to JSON",
   "exports": {
     ".": {
@@ -30,7 +30,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.7.0",
     "@types/bun": "^1.0.8",
-    "@types/css-tree": "^2.3.6",
+    "@types/css-tree": "^2.3.7",
     "eslint": "^8.57.0",
     "lint-staged": "^15.2.2",
     "simple-git-hooks": "^2.10.0",

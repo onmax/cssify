@@ -1,6 +1,6 @@
 # css4ify
 
-A simple tool to convert CSS to JSON.
+A simple tool to convert CSS to JSON and JSON to CSS.
 
 - 🌲 Uses [`csstree`](https://github.com/csstree/csstree) to parse CSS
 - 🚀 ESM support
@@ -15,10 +15,14 @@ A simple tool to convert CSS to JSON.
 npm install css4ify
 ```
 
-```javascript
-import { cssify } from 'css4ify';
+<details>
 
-cssify(`
+<summary>Convert CSS to JSON</summary>
+
+```javascript
+import { jsonify } from 'css4ify';
+
+const json = jsonify(`
   .foo {
     color: red;
   }
@@ -30,24 +34,91 @@ cssify(`
     }
   }
 `);
-/**
- * {
- *  ".foo": {
- *    "color": "red"
- *  },
- *  ".bar": {
- *   "color": "blue",
- *    "&:hover": {
- *      "color": "green"
- *    }
- *  }
- * }
- */
 ```
+
+It will return:
+
+```json
+{
+  ".foo": {
+    "color": "red"
+  },
+  ".bar": {
+    "color": "blue",
+    "&:hover": {
+      "color": "green"
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+
+<summary>Convert JSON to CSS</summary>
+
+```javascript
+import { stringify } from 'css4ify';
+
+const css = stringify({
+  ".foo": {
+    "color": "red"
+  },
+  ".bar": {
+    "color": "blue",
+    "&:hover": {
+      "color": "green"
+    }
+  }
+});
+```
+
+It will return:
+
+```css
+.foo {
+  color: red;
+}
+.bar {
+  color: blue;
+  &:hover {
+    color: green;
+  }
+}
+```
+
+</details>
 
 ## Missing features
 
-Do you need a feature that is not implemented? Please open an issue or a pull request.
+> This project is in early stages and may not support all CSS features. You can help by opening an issue or a pull request.
+
+> CSS Nesting is NOT supported when there is properties after the nested selector. For example:
+
+```css
+/* This will not work */
+.foo {
+  color: red;
+  &:hover {
+    color: green;
+  }
+  background-color: blue;
+}
+```
+
+To solve it, just move the properties to be before the nested selector:
+
+```css
+/* This will work */
+.foo {
+  color: red;
+  background-color: blue;
+  &:hover {
+    color: green;
+  }
+}
+```
 
 ## Development
 
