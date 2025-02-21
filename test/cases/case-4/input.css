@@ -1,0 +1,19 @@
+:root {
+  --main-color: blue;
+}
+
+.button {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: lightblue;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 10px 20px;
+  }
+}
